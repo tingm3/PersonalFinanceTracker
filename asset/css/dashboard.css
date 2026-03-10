@@ -144,21 +144,6 @@ strong {
     z-index: 10;
 }
 
-.navbar {
-    background-color: #f0f0f0 !important;
-}
-
-.nav-link {
-    color: #000000 !important;
-    font-weight: bold;
-}
-
-.navbar-brand-img {
-    height: 36px;
-    width: auto;
-    display: inline-block;
-}
-
 #monthly-earnings-chart #apexcharts-canvas {
     position: relative;
 }
