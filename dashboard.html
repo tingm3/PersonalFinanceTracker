@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom -->
+    <link rel="stylesheet" type="text/css" media="screen" href="asset/custom.css" />
+    <script src="asset/script.js"></script>
+
+    <!-- Import -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="asset/data.js"></script>
+    <title>Personal Finance Tracker</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg- navbar-dark">
+            <div class="container-fluid">
+                <img src="/asset/img/logo.png" class="navbar-brand-img" alt="Logo">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link" href="transactions.html">Transactions</a>
+                        </li>
+                        <a class="nav-link" href="about.html">Accounts & Wallets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="teams.html">Incomes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="teams.html">Expenses</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="wrapper">
+        <div class="content-area">
+            <div class="container-fluid">
+
+                <div class="main">
+                    <div class="row sparkboxes mt-4 mb-4">
+                        <div class="col-md-4">
+                            <div class="box box1">
+                                <div id="spark1"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box box2">
+                                <div id="spark2"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box box3">
+                                <div id="spark3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5 mb-4">
+                        <div class="col-md-6">
+                            <div class="box">
+                                <div id="bar"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box">
+                                <div id="donut"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="box">
+                                <div id="area"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box">
+                                <div id="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="asset/script.js"></script>
+
+</body>
+
+</html>
