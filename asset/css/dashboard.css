@@ -1,0 +1,34 @@
+.content-area {
+    margin: 0 auto;
+}
+
+.box {
+    box-shadow: 0px 1px 22px -12px #607d8b;
+    background-color: #fff;
+    padding: 25px 35px 25px 30px;
+}
+
+.sparkboxes .box {
+    padding: 3px 0 0 0;
+    position: relative;
+}
+
+#spark1,
+#spark2,
+#spark3 {
+    position: relative;
+    padding-top: 15px;
+}
+
+.sparkboxes #apexcharts-subtitle-text {
+    fill: #8799a2 !important;
+}
+
+.row .box {
+    height: 100%;
+}
+
+.row>[class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}

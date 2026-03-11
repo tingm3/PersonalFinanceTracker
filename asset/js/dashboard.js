@@ -30,8 +30,7 @@ var randomizeArray = function (arg) {
 var sparklineData = [47, 45, 54, 38, 56, 24, 65, 31, 37, 39, 62, 51, 35, 41, 35, 27, 93, 53, 61, 27, 54, 43, 19, 46];
 
 // the default colorPalette for this dashboard
-//var colorPalette = ['#01BFD6', '#5564BE', '#F7A600', '#EDCD24', '#F74F58'];
-var colorPalette = ['#00D8B6', '#008FFB', '#FEB019', '#FF4560', '#775DD0']
+var colorPalette = ['#775DD0', '#FEB019', '#00D8B6', '#FF4560', '#008FFB']
 
 var spark1 = {
     chart: {
@@ -142,7 +141,7 @@ var spark3 = {
         opacity: 1,
     },
     series: [{
-        name: 'Profits',
+        name: 'Savings',
         data: randomizeArray(sparklineData)
     }],
     labels: [...Array(24).keys()].map(n => `2018-09-0${n + 1}`),
@@ -163,65 +162,10 @@ var spark3 = {
         }
     },
     subtitle: {
-        text: 'Profits',
+        text: 'Savings',
         offsetX: 30,
         style: {
             fontSize: '14px',
-            cssClass: 'apexcharts-yaxis-title'
-        }
-    }
-}
-
-var monthlyEarningsOpt = {
-    chart: {
-        type: 'area',
-        height: 260,
-        background: '#eff4f7',
-        sparkline: {
-            enabled: true
-        },
-        offsetY: 20
-    },
-    stroke: {
-        curve: 'straight'
-    },
-    fill: {
-        type: 'solid',
-        opacity: 1,
-    },
-    series: [{
-        data: randomizeArray(sparklineData)
-    }],
-    xaxis: {
-        crosshairs: {
-            width: 1
-        },
-    },
-    yaxis: {
-        min: 0,
-        max: 130
-    },
-    colors: ['#dce6ec'],
-
-    title: {
-        text: 'Total Earned',
-        offsetX: -30,
-        offsetY: 100,
-        align: 'right',
-        style: {
-            color: '#7c939f',
-            fontSize: '16px',
-            cssClass: 'apexcharts-yaxis-title'
-        }
-    },
-    subtitle: {
-        text: '$135,965',
-        offsetX: -30,
-        offsetY: 100,
-        align: 'right',
-        style: {
-            color: '#7c939f',
-            fontSize: '24px',
             cssClass: 'apexcharts-yaxis-title'
         }
     }
@@ -232,7 +176,6 @@ new ApexCharts(document.querySelector("#spark1"), spark1).render();
 new ApexCharts(document.querySelector("#spark2"), spark2).render();
 new ApexCharts(document.querySelector("#spark3"), spark3).render();
 
-var monthlyEarningsChart = new ApexCharts(document.querySelector("#monthly-earnings-chart"), monthlyEarningsOpt);
 
 
 var optionsArea = {
@@ -328,7 +271,7 @@ var optionsArea = {
         opacity: 1,
     },
     title: {
-        text: 'Daily Visits Insights',
+        text: 'Daily Insights',
         align: 'left',
         style: {
             fontSize: '18px'
@@ -392,7 +335,7 @@ var optionsBar = {
     },
     colors: colorPalette,
     series: [{
-        name: "Clothing",
+        name: "Entertainment",
         data: [42, 52, 16, 55, 59, 51, 45, 32, 26, 33, 44, 51, 42, 56],
     }, {
         name: "Food Products",
@@ -460,13 +403,13 @@ var optionDonut = {
     },
     colors: colorPalette,
     title: {
-        text: 'Department Sales',
+        text: 'Expenses',
         style: {
             fontSize: '18px'
         }
     },
     series: [21, 23, 19, 14, 6],
-    labels: ['Clothing', 'Food Products', 'Electronics', 'Kitchen Utility', 'Gardening'],
+    labels: ['Food', 'Transport', 'Housing', 'Entertainment', 'Health'],
     legend: {
         position: 'left',
         offsetY: 80
@@ -479,110 +422,29 @@ var donut = new ApexCharts(
 )
 donut.render();
 
+var topExpenses = [
+    { rank: 1, description: 'Rent', category: 'Housing', amount: '$1,200.00' },
+    { rank: 2, description: 'Electricity Bill', category: 'Utilities', amount: '$120.00' },
+    { rank: 3, description: 'Groceries', category: 'Food', amount: '$85.40' }
+];
 
-function trigoSeries(cnt, strength) {
-    var data = [];
-    for (var i = 0; i < cnt; i++) {
-        data.push((Math.sin(i / strength) * (i / strength) + i / strength + 1) * (strength * 2));
-    }
+var topExpensesHtml = `
+    <h5 style="font-size:18px; margin-bottom: 20px;">Top Expenses</h5>
+    ${topExpenses.map(e => `
+        <div style="display:flex; justify-content:space-between; align-items:center; padding: 12px 0; border-bottom: 1px solid #f1f4f7;">
+            <div style="display:flex; align-items:center; gap: 12px;">
+                <span style="font-size:18px; font-weight:700; color:#e0e3e8;">#${e.rank}</span>
+                <div>
+                    <div style="font-weight:600; color:#444;">${e.description}</div>
+                    <div style="font-size:12px; color:#8799a2;">${e.category}</div>
+                </div>
+            </div>
+            <span style="font-weight:700; color:#dc3545;">${e.amount}</span>
+        </div>
+    `).join('')}
+`;
 
-    return data;
-}
-
-
-
-var optionsLine = {
-    chart: {
-        height: 340,
-        type: 'line',
-        zoom: {
-            enabled: false
-        }
-    },
-    plotOptions: {
-        stroke: {
-            width: 4,
-            curve: 'smooth'
-        },
-    },
-    colors: colorPalette,
-    series: [
-        {
-            name: "Day Time",
-            data: trigoSeries(52, 20)
-        },
-        {
-            name: "Night Time",
-            data: trigoSeries(52, 27)
-        },
-    ],
-    title: {
-        floating: false,
-        text: 'Customers',
-        align: 'left',
-        style: {
-            fontSize: '18px'
-        }
-    },
-    subtitle: {
-        text: '168,215',
-        align: 'center',
-        margin: 30,
-        offsetY: 40,
-        style: {
-            color: '#222',
-            fontSize: '24px',
-        }
-    },
-    markers: {
-        size: 0
-    },
-
-    grid: {
-
-    },
-    xaxis: {
-        labels: {
-            show: false
-        },
-        axisTicks: {
-            show: false
-        },
-        tooltip: {
-            enabled: false
-        }
-    },
-    yaxis: {
-        tickAmount: 2,
-        labels: {
-            show: false
-        },
-        axisBorder: {
-            show: false,
-        },
-        axisTicks: {
-            show: false
-        },
-        min: 0,
-    },
-    legend: {
-        position: 'top',
-        horizontalAlign: 'left',
-        offsetY: -20,
-        offsetX: -30
-    }
-
-}
-
-var chartLine = new ApexCharts(document.querySelector('#line'), optionsLine);
-
-// a small hack to extend height in website sample dashboard
-chartLine.render().then(function () {
-    var ifr = document.querySelector("#wrapper");
-    if (ifr.contentDocument) {
-        ifr.style.height = ifr.contentDocument.body.scrollHeight + 20 + 'px';
-    }
-});
+document.querySelector('#top-expenses').innerHTML = topExpensesHtml;
 
 
 // on smaller screen, change the legends position for donut
