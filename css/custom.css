@@ -7,10 +7,12 @@
     font-weight: bold;
 }
 
-/* Logo sizing */
 .navbar-brand-img {
     height: 36px;
     width: auto;
     display: inline-block;
 }
 
+.nav-link.active {
+    color: #0d6efd !important;
+}
