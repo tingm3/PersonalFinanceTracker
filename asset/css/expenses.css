@@ -11,3 +11,8 @@
     color: #dc3545 !important;
     font-weight: 600;
 }
+
+#expenses-table td:first-child,
+#expenses-table th:first-child {
+    text-align: left !important;
+}
