@@ -1,513 +1,453 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Page setup / styles -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Incomes - Personal Finance Tracker</title>
 
-        <link href="css/bootstrap.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/custom.css" />
-        <link rel="stylesheet" href="css/incomes.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-        />
+<head>
+    <!-- Page setup / styles -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incomes - Personal Finance Tracker</title>
 
-        <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-    </head>
+    <link rel="stylesheet" href="./asset/css/incomes.css" />
 
-    <body>
-        <!-- Navigation bar -->
-        <header>
-            <nav class="navbar navbar-expand-sm">
-                <div class="container-fluid">
-                    <a href="index.html" class="navbar-brand">
-                        <img
-                            src="img/logo.png"
-                            class="navbar-brand-img"
-                            alt="Logo"
-                        />
-                    </a>
+    <link rel="stylesheet" type="text/css" media="screen" href="./asset/css/custom.css" />
 
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapsibleNavbar"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-                    <div
-                        class="collapse navbar-collapse"
-                        id="collapsibleNavbar"
-                    >
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dashboard.html"
-                                    >Dashboard</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="transactions.html"
-                                    >Transactions</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="accountWallets.html"
-                                    >Accounts &amp; Wallets</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="incomes.html"
-                                    >Incomes</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="expenses.html"
-                                    >Expenses</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.png" class="navbar-brand-img" alt="Logo" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="transactions.html">Transactions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="accountWallets.html">Accounts &amp; Wallets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="incomes.html">Incomes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="expenses.html">Expenses</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-
-        <!-- Main page content -->
-        <main class="incomes-page container-fluid py-4 px-4">
-            <!-- Page heading -->
-            <div class="page-heading mb-4">
-                <h1>Incomes</h1>
-                <p>
-                    Monitor salary, side income, and recurring revenue sources
-                    in one dashboard.
-                </p>
             </div>
+        </nav>
+    </header>
 
-            <!-- Top summary cards -->
-            <div class="row g-4 mb-4">
-                <div class="col-md-6 col-xl-3">
-                    <div class="income-card summary-card">
-                        <div class="summary-icon green-bg">
-                            <i class="bi bi-cash-stack"></i>
-                        </div>
-                        <div>
-                            <h6>Total Income</h6>
-                            <h3>$7,420.00</h3>
-                            <p>+8.4% from last month</p>
-                        </div>
+
+    <!-- Main page content -->
+    <main class="incomes-page container-fluid py-4 px-4">
+        <!-- Page heading -->
+        <div class="page-heading mb-4">
+            <h1>Incomes</h1>
+            <p>
+                Monitor salary, side income, and recurring revenue sources
+                in one dashboard.
+            </p>
+        </div>
+
+        <!-- Top summary cards -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="income-card summary-card">
+                    <div class="summary-icon green-bg">
+                        <i class="bi bi-cash-stack"></i>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="income-card summary-card">
-                        <div class="summary-icon blue-bg">
-                            <i class="bi bi-briefcase"></i>
-                        </div>
-                        <div>
-                            <h6>Main Job</h6>
-                            <h3>$5,800.00</h3>
-                            <p>Bi-weekly salary</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="income-card summary-card">
-                        <div class="summary-icon gold-bg">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-                        <div>
-                            <h6>Freelance</h6>
-                            <h3>$1,050.00</h3>
-                            <p>3 active projects</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="income-card summary-card">
-                        <div class="summary-icon purple-bg">
-                            <i class="bi bi-arrow-repeat"></i>
-                        </div>
-                        <div>
-                            <h6>Recurring Income</h6>
-                            <h3>$570.00</h3>
-                            <p>Subscriptions & side work</p>
-                        </div>
+                    <div>
+                        <h6>Total Income</h6>
+                        <h3>$7,420.00</h3>
+                        <p>+8.4% from last month</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row g-4">
-                <!-- Left column -->
-                <div class="col-xl-8">
-                    <!-- Income sources -->
-                    <div class="income-card mb-4">
-                        <div class="section-top">
-                            <h4>Income Sources</h4>
-                            <a href="#">View All</a>
-                        </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="income-card summary-card">
+                    <div class="summary-icon blue-bg">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+                    <div>
+                        <h6>Main Job</h6>
+                        <h3>$5,800.00</h3>
+                        <p>Bi-weekly salary</p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="source-item">
-                            <div class="source-left">
-                                <div class="source-icon blue-bg">
-                                    <i class="bi bi-building"></i>
-                                </div>
-                                <div>
-                                    <h5>
-                                        Part-Time Job
-                                        <span
-                                            class="small-status status-primary"
-                                            >Primary</span
-                                        >
-                                    </h5>
-                                    <p>Expected deposit every 2 weeks</p>
-                                </div>
-                            </div>
-                            <div class="source-right">
-                                <strong>$5,800.00</strong>
-                                <i class="bi bi-chevron-right"></i>
-                            </div>
-                        </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="income-card summary-card">
+                    <div class="summary-icon gold-bg">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div>
+                        <h6>Freelance</h6>
+                        <h3>$1,050.00</h3>
+                        <p>3 active projects</p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="source-item">
-                            <div class="source-left">
-                                <div class="source-icon gold-bg">
-                                    <i class="bi bi-pencil-square"></i>
-                                </div>
-                                <div>
-                                    <h5>
-                                        Freelance Design
-                                        <span class="small-status status-active"
-                                            >Active</span
-                                        >
-                                    </h5>
-                                    <p>Project-based monthly income</p>
-                                </div>
-                            </div>
-                            <div class="source-right">
-                                <strong>$1,050.00</strong>
-                                <i class="bi bi-chevron-right"></i>
-                            </div>
-                        </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="income-card summary-card">
+                    <div class="summary-icon purple-bg">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <div>
+                        <h6>Recurring Income</h6>
+                        <h3>$570.00</h3>
+                        <p>Subscriptions & side work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <div class="source-item">
-                            <div class="source-left">
-                                <div class="source-icon green-bg">
-                                    <i class="bi bi-phone"></i>
-                                </div>
-                                <div>
-                                    <h5>
-                                        Online Sales
-                                        <span class="small-status status-linked"
-                                            >Linked</span
-                                        >
-                                    </h5>
-                                    <p>Small side business earnings</p>
-                                </div>
+        <div class="row g-4">
+            <!-- Left column -->
+            <div class="col-xl-8">
+                <!-- Income sources -->
+                <div class="income-card mb-4">
+                    <div class="section-top">
+                        <h4>Income Sources</h4>
+                        <a href="#">View All</a>
+                    </div>
+
+                    <div class="source-item">
+                        <div class="source-left">
+                            <div class="source-icon blue-bg">
+                                <i class="bi bi-building"></i>
                             </div>
-                            <div class="source-right">
-                                <strong>$320.00</strong>
-                                <i class="bi bi-chevron-right"></i>
+                            <div>
+                                <h5>
+                                    Part-Time Job
+                                    <span class="small-status status-primary">Primary</span>
+                                </h5>
+                                <p>Expected deposit every 2 weeks</p>
                             </div>
                         </div>
-
-                        <div class="source-item mb-0">
-                            <div class="source-left">
-                                <div class="source-icon purple-bg">
-                                    <i class="bi bi-repeat"></i>
-                                </div>
-                                <div>
-                                    <h5>
-                                        Monthly Allowance
-                                        <span class="small-status status-active"
-                                            >Recurring</span
-                                        >
-                                    </h5>
-                                    <p>Fixed monthly transfer</p>
-                                </div>
-                            </div>
-                            <div class="source-right">
-                                <strong>$250.00</strong>
-                                <i class="bi bi-chevron-right"></i>
-                            </div>
+                        <div class="source-right">
+                            <strong>$5,800.00</strong>
+                            <i class="bi bi-chevron-right"></i>
                         </div>
                     </div>
 
-                    <!-- Recent income activity -->
-                    <div class="income-card mb-4">
-                        <div class="section-top">
-                            <h4>Recent Income Activity</h4>
-                            <a href="#">View More</a>
+                    <div class="source-item">
+                        <div class="source-left">
+                            <div class="source-icon gold-bg">
+                                <i class="bi bi-pencil-square"></i>
+                            </div>
+                            <div>
+                                <h5>
+                                    Freelance Design
+                                    <span class="small-status status-active">Active</span>
+                                </h5>
+                                <p>Project-based monthly income</p>
+                            </div>
                         </div>
-
-                        <div class="table-responsive">
-                            <table class="table income-table align-middle mb-0">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Source</th>
-                                        <th>Type</th>
-                                        <th>Account</th>
-                                        <th class="text-end">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mar 09</td>
-                                        <td>Part-Time Job Deposit</td>
-                                        <td>
-                                            <span class="soft-badge blue-badge"
-                                                >Salary</span
-                                            >
-                                        </td>
-                                        <td>Checking</td>
-                                        <td
-                                            class="text-end text-success fw-bold"
-                                        >
-                                            +$2,900.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mar 07</td>
-                                        <td>Freelance Website Project</td>
-                                        <td>
-                                            <span class="soft-badge gold-badge"
-                                                >Freelance</span
-                                            >
-                                        </td>
-                                        <td>Checking</td>
-                                        <td
-                                            class="text-end text-success fw-bold"
-                                        >
-                                            +$450.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mar 04</td>
-                                        <td>Online Shop Payout</td>
-                                        <td>
-                                            <span class="soft-badge green-badge"
-                                                >Side Income</span
-                                            >
-                                        </td>
-                                        <td>Wallet</td>
-                                        <td
-                                            class="text-end text-success fw-bold"
-                                        >
-                                            +$120.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mar 01</td>
-                                        <td>Monthly Allowance</td>
-                                        <td>
-                                            <span
-                                                class="soft-badge purple-badge"
-                                                >Recurring</span
-                                            >
-                                        </td>
-                                        <td>Savings</td>
-                                        <td
-                                            class="text-end text-success fw-bold"
-                                        >
-                                            +$250.00
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="source-right">
+                            <strong>$1,050.00</strong>
+                            <i class="bi bi-chevron-right"></i>
                         </div>
                     </div>
 
-                    <!-- Manage income section -->
-                    <div class="income-card">
-                        <div class="section-top">
-                            <h4>Add & Manage Income Sources</h4>
+                    <div class="source-item">
+                        <div class="source-left">
+                            <div class="source-icon green-bg">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <div>
+                                <h5>
+                                    Online Sales
+                                    <span class="small-status status-linked">Linked</span>
+                                </h5>
+                                <p>Small side business earnings</p>
+                            </div>
                         </div>
+                        <div class="source-right">
+                            <strong>$320.00</strong>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </div>
 
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="manage-box">
-                                    <i class="bi bi-plus-circle"></i>
-                                    <h6>Add New Source</h6>
-                                    <p>
-                                        Create a new income category for salary,
-                                        side hustles, or recurring revenue.
-                                    </p>
-                                    <button class="btn manage-btn">
-                                        Add Source
-                                    </button>
-                                </div>
+                    <div class="source-item mb-0">
+                        <div class="source-left">
+                            <div class="source-icon purple-bg">
+                                <i class="bi bi-repeat"></i>
                             </div>
-
-                            <div class="col-md-4">
-                                <div class="manage-box">
-                                    <i class="bi bi-calendar-check"></i>
-                                    <h6>Schedule Income</h6>
-                                    <p>
-                                        Set expected payment dates for
-                                        predictable monthly cash flow tracking.
-                                    </p>
-                                    <button class="btn manage-btn">
-                                        Schedule
-                                    </button>
-                                </div>
+                            <div>
+                                <h5>
+                                    Monthly Allowance
+                                    <span class="small-status status-active">Recurring</span>
+                                </h5>
+                                <p>Fixed monthly transfer</p>
                             </div>
-
-                            <div class="col-md-4">
-                                <div class="manage-box">
-                                    <i class="bi bi-gear"></i>
-                                    <h6>Manage Categories</h6>
-                                    <p>
-                                        Edit income labels and organize your
-                                        sources by job, freelance, or passive
-                                        income.
-                                    </p>
-                                    <button class="btn manage-btn">
-                                        Manage
-                                    </button>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="source-right">
+                            <strong>$250.00</strong>
+                            <i class="bi bi-chevron-right"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right column -->
-                <div class="col-xl-4">
-                    <!-- Monthly goal -->
-                    <div class="income-card mb-4">
-                        <div class="section-top">
-                            <h4>Monthly Goal</h4>
-                            <a href="#">Edit</a>
-                        </div>
-
-                        <div class="goal-box">
-                            <p>Current Progress</p>
-                            <h2>$7,420 / $8,000</h2>
-                            <span
-                                >You are close to reaching your target income
-                                for this month.</span
-                            >
-                        </div>
-
-                        <div class="progress goal-progress mt-3">
-                            <div
-                                class="progress-bar bg-success"
-                                style="width: 93%"
-                            ></div>
-                        </div>
-                        <p class="goal-percent mt-2">93% complete</p>
+                <!-- Recent income activity -->
+                <div class="income-card mb-4">
+                    <div class="section-top">
+                        <h4>Recent Income Activity</h4>
+                        <a href="#">View More</a>
                     </div>
 
-                    <!-- Income breakdown -->
-                    <div class="income-card mb-4">
-                        <div class="section-top">
-                            <h4>Income Breakdown</h4>
-                        </div>
+                    <div class="table-responsive">
+                        <table class="table income-table align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Source</th>
+                                    <th>Type</th>
+                                    <th>Account</th>
+                                    <th class="text-end">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mar 09</td>
+                                    <td>Part-Time Job Deposit</td>
+                                    <td>
+                                        <span class="soft-badge blue-badge">Salary</span>
+                                    </td>
+                                    <td>Checking</td>
+                                    <td class="text-end text-success fw-bold">
+                                        +$2,900.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 07</td>
+                                    <td>Freelance Website Project</td>
+                                    <td>
+                                        <span class="soft-badge gold-badge">Freelance</span>
+                                    </td>
+                                    <td>Checking</td>
+                                    <td class="text-end text-success fw-bold">
+                                        +$450.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 04</td>
+                                    <td>Online Shop Payout</td>
+                                    <td>
+                                        <span class="soft-badge green-badge">Side Income</span>
+                                    </td>
+                                    <td>Wallet</td>
+                                    <td class="text-end text-success fw-bold">
+                                        +$120.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 01</td>
+                                    <td>Monthly Allowance</td>
+                                    <td>
+                                        <span class="soft-badge purple-badge">Recurring</span>
+                                    </td>
+                                    <td>Savings</td>
+                                    <td class="text-end text-success fw-bold">
+                                        +$250.00
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                        <div class="breakdown-item">
-                            <div class="d-flex justify-content-between">
-                                <span>Main Job</span>
-                                <span>78%</span>
-                            </div>
-                            <div class="progress">
-                                <div
-                                    class="progress-bar bg-primary"
-                                    style="width: 78%"
-                                ></div>
-                            </div>
-                        </div>
-
-                        <div class="breakdown-item">
-                            <div class="d-flex justify-content-between">
-                                <span>Freelance</span>
-                                <span>14%</span>
-                            </div>
-                            <div class="progress">
-                                <div
-                                    class="progress-bar bg-warning"
-                                    style="width: 14%"
-                                ></div>
-                            </div>
-                        </div>
-
-                        <div class="breakdown-item">
-                            <div class="d-flex justify-content-between">
-                                <span>Recurring</span>
-                                <span>8%</span>
-                            </div>
-                            <div class="progress">
-                                <div
-                                    class="progress-bar bg-info"
-                                    style="width: 8%"
-                                ></div>
-                            </div>
-                        </div>
+                <!-- Manage income section -->
+                <div class="income-card">
+                    <div class="section-top">
+                        <h4>Add & Manage Income Sources</h4>
                     </div>
 
-                    <!-- Upcoming deposits -->
-                    <div class="income-card mb-4">
-                        <div class="section-top">
-                            <h4>Upcoming Deposits</h4>
-                            <a href="#">View All</a>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="manage-box">
+                                <i class="bi bi-plus-circle"></i>
+                                <h6>Add New Source</h6>
+                                <p>
+                                    Create a new income category for salary,
+                                    side hustles, or recurring revenue.
+                                </p>
+                                <button class="btn manage-btn">
+                                    Add Source
+                                </button>
+                            </div>
                         </div>
 
-                        <div class="deposit-item">
-                            <div>
-                                <h6>Part-Time Job</h6>
-                                <p>Expected on Mar 15</p>
+                        <div class="col-md-4">
+                            <div class="manage-box">
+                                <i class="bi bi-calendar-check"></i>
+                                <h6>Schedule Income</h6>
+                                <p>
+                                    Set expected payment dates for
+                                    predictable monthly cash flow tracking.
+                                </p>
+                                <button class="btn manage-btn">
+                                    Schedule
+                                </button>
                             </div>
-                            <strong>$2,900</strong>
                         </div>
 
-                        <div class="deposit-item">
-                            <div>
-                                <h6>Freelance Invoice</h6>
-                                <p>Expected on Mar 18</p>
-                            </div>
-                            <strong>$600</strong>
-                        </div>
-
-                        <div class="deposit-item mb-0">
-                            <div>
-                                <h6>Monthly Allowance</h6>
-                                <p>Expected on Apr 01</p>
-                            </div>
-                            <strong>$250</strong>
-                        </div>
-                    </div>
-
-                    <!-- Quick actions -->
-                    <div class="income-card">
-                        <div class="section-top">
-                            <h4>Quick Actions</h4>
-                        </div>
-
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="action-box">Add Income</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="action-box">Export</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="action-box">Categories</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="action-box">Reports</div>
+                        <div class="col-md-4">
+                            <div class="manage-box">
+                                <i class="bi bi-gear"></i>
+                                <h6>Manage Categories</h6>
+                                <p>
+                                    Edit income labels and organize your
+                                    sources by job, freelance, or passive
+                                    income.
+                                </p>
+                                <button class="btn manage-btn">
+                                    Manage
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-    </body>
+
+            <!-- Right column -->
+            <div class="col-xl-4">
+                <!-- Monthly goal -->
+                <div class="income-card mb-4">
+                    <div class="section-top">
+                        <h4>Monthly Goal</h4>
+                        <a href="#">Edit</a>
+                    </div>
+
+                    <div class="goal-box">
+                        <p>Current Progress</p>
+                        <h2>$7,420 / $8,000</h2>
+                        <span>You are close to reaching your target income
+                            for this month.</span>
+                    </div>
+
+                    <div class="progress goal-progress mt-3">
+                        <div class="progress-bar bg-success" style="width: 93%"></div>
+                    </div>
+                    <p class="goal-percent mt-2">93% complete</p>
+                </div>
+
+                <!-- Income breakdown -->
+                <div class="income-card mb-4">
+                    <div class="section-top">
+                        <h4>Income Breakdown</h4>
+                    </div>
+
+                    <div class="breakdown-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Main Job</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" style="width: 78%"></div>
+                        </div>
+                    </div>
+
+                    <div class="breakdown-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Freelance</span>
+                            <span>14%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 14%"></div>
+                        </div>
+                    </div>
+
+                    <div class="breakdown-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Recurring</span>
+                            <span>8%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width: 8%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming deposits -->
+                <div class="income-card mb-4">
+                    <div class="section-top">
+                        <h4>Upcoming Deposits</h4>
+                        <a href="#">View All</a>
+                    </div>
+
+                    <div class="deposit-item">
+                        <div>
+                            <h6>Part-Time Job</h6>
+                            <p>Expected on Mar 15</p>
+                        </div>
+                        <strong>$2,900</strong>
+                    </div>
+
+                    <div class="deposit-item">
+                        <div>
+                            <h6>Freelance Invoice</h6>
+                            <p>Expected on Mar 18</p>
+                        </div>
+                        <strong>$600</strong>
+                    </div>
+
+                    <div class="deposit-item mb-0">
+                        <div>
+                            <h6>Monthly Allowance</h6>
+                            <p>Expected on Apr 01</p>
+                        </div>
+                        <strong>$250</strong>
+                    </div>
+                </div>
+
+                <!-- Quick actions -->
+                <div class="income-card">
+                    <div class="section-top">
+                        <h4>Quick Actions</h4>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="action-box">Add Income</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="action-box">Export</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="action-box">Categories</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="action-box">Reports</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

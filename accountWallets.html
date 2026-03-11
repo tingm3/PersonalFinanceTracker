@@ -1,511 +1,445 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Page setup / styles -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Accounts & Wallets - Personal Finance Tracker</title>
 
-        <link href="css/bootstrap.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/custom.css" />
-        <link rel="stylesheet" href="css/accountWallets.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-        />
+<head>
+    <!-- Page setup / styles -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accounts & Wallets - Personal Finance Tracker</title>
 
-        <!-- Scripts -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-    </head>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./asset/css/custom.css" />
+    <link rel="stylesheet" href="./assset/css/accountWallets.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
 
-    <body>
-        <!-- Navigation bar -->
-        <header>
-            <nav class="navbar navbar-expand-sm">
-                <div class="container-fluid">
-                    <a href="index.html" class="navbar-brand">
-                        <img
-                            src="img/logo.png"
-                            class="navbar-brand-img"
-                            alt="Logo"
-                        />
-                    </a>
+<body>
+    <!-- Navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.png" class="navbar-brand-img" alt="Logo" />
+                </a>
 
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapsibleNavbar"
-                    >
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <div
-                        class="collapse navbar-collapse"
-                        id="collapsibleNavbar"
-                    >
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dashboard.html"
-                                    >Dashboard</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="transactions.html"
-                                    >Transactions</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link active"
-                                    href="accountWallets.html"
-                                    >Accounts &amp; Wallets</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="incomes.html"
-                                    >Incomes</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="expenses.html"
-                                    >Expenses</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="transactions.html">Transactions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="accountWallets.html">Accounts &amp; Wallets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="incomes.html">Incomes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="expenses.html">Expenses</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-
-        <!-- Main page content -->
-        <main class="accounts-page container-fluid py-4 px-4">
-            <!-- Page heading -->
-            <div class="page-heading mb-4">
-                <h1>Accounts &amp; Wallets</h1>
-                <p>
-                    Track your balances, cards, wallets, and recent activity all
-                    in one place.
-                </p>
             </div>
+        </nav>
+    </header>
 
-            <!-- Top summary cards -->
-            <div class="row g-4 mb-4">
-                <div class="col-md-6 col-xl-3">
-                    <div class="dashboard-card summary-card">
-                        <div class="summary-icon gold-bg">
-                            <i class="bi bi-wallet2"></i>
-                        </div>
-                        <div>
-                            <h6>Total Balance</h6>
-                            <h3>$18,540.75</h3>
-                            <p>+3.2% this month</p>
-                        </div>
+    <!-- Main page content -->
+    <main class="accounts-page container-fluid py-4 px-4">
+        <!-- Page heading -->
+        <div class="page-heading mb-4">
+            <h1>Accounts &amp; Wallets</h1>
+            <p>
+                Track your balances, cards, wallets, and recent activity all
+                in one place.
+            </p>
+        </div>
+
+        <!-- Top summary cards -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="dashboard-card summary-card">
+                    <div class="summary-icon gold-bg">
+                        <i class="bi bi-wallet2"></i>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="dashboard-card summary-card">
-                        <div class="summary-icon blue-bg">
-                            <i class="bi bi-bank"></i>
-                        </div>
-                        <div>
-                            <h6>Checking</h6>
-                            <h3>$6,210.25</h3>
-                            <p>2 active accounts</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="dashboard-card summary-card">
-                        <div class="summary-icon green-bg">
-                            <i class="bi bi-piggy-bank"></i>
-                        </div>
-                        <div>
-                            <h6>Savings</h6>
-                            <h3>$9,880.00</h3>
-                            <p>Emergency fund growing</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-3">
-                    <div class="dashboard-card summary-card">
-                        <div class="summary-icon purple-bg">
-                            <i class="bi bi-credit-card-2-front"></i>
-                        </div>
-                        <div>
-                            <h6>Wallet / Cards</h6>
-                            <h3>$2,450.50</h3>
-                            <p>3 cards linked</p>
-                        </div>
+                    <div>
+                        <h6>Total Balance</h6>
+                        <h3>$18,540.75</h3>
+                        <p>+3.2% this month</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row g-4">
-                <!-- Left column -->
-                <div class="col-xl-8">
-                    <!-- Accounts list -->
-                    <div class="dashboard-card mb-4">
-                        <div class="section-top">
-                            <h4>My Accounts</h4>
-                            <a href="#">View All</a>
-                        </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="dashboard-card summary-card">
+                    <div class="summary-icon blue-bg">
+                        <i class="bi bi-bank"></i>
+                    </div>
+                    <div>
+                        <h6>Checking</h6>
+                        <h3>$6,210.25</h3>
+                        <p>2 active accounts</p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="account-item">
-                            <div class="account-left">
-                                <div class="account-strip gold-bg"></div>
-                                <div>
-                                    <h5>
-                                        Checking Account
-                                        <span
-                                            class="small-status status-primary"
-                                            >Primary</span
-                                        >
-                                    </h5>
-                                    <p>**** 4832 · Everyday banking</p>
-                                </div>
-                            </div>
-                            <div class="account-right">
-                                <strong>$4,280.50</strong>
-                                <i class="bi bi-chevron-right"></i>
-                            </div>
-                        </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="dashboard-card summary-card">
+                    <div class="summary-icon green-bg">
+                        <i class="bi bi-piggy-bank"></i>
+                    </div>
+                    <div>
+                        <h6>Savings</h6>
+                        <h3>$9,880.00</h3>
+                        <p>Emergency fund growing</p>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="account-item">
-                            <div class="account-left">
-                                <div class="account-strip green-bg"></div>
-                                <div>
-                                    <h5>
-                                        Savings Account
-                                        <span class="small-status status-active"
-                                            >Active</span
-                                        >
-                                    </h5>
-                                    <p>**** 9011 · Emergency fund</p>
-                                </div>
-                            </div>
-                            <div class="account-right">
-                                <strong>$9,880.00</strong>
-                                <i class="bi bi-chevron-right"></i>
-                            </div>
-                        </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="dashboard-card summary-card">
+                    <div class="summary-icon purple-bg">
+                        <i class="bi bi-credit-card-2-front"></i>
+                    </div>
+                    <div>
+                        <h6>Wallet / Cards</h6>
+                        <h3>$2,450.50</h3>
+                        <p>3 cards linked</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <div class="account-item">
-                            <div class="account-left">
-                                <div class="account-strip blue-bg"></div>
-                                <div>
-                                    <h5>
-                                        Student Account
-                                        <span class="small-status status-linked"
-                                            >Linked</span
-                                        >
-                                    </h5>
-                                    <p>**** 2204 · School expenses</p>
-                                </div>
-                            </div>
-                            <div class="account-right">
-                                <strong>$1,929.75</strong>
-                                <i class="bi bi-chevron-right"></i>
+        <div class="row g-4">
+            <!-- Left column -->
+            <div class="col-xl-8">
+                <!-- Accounts list -->
+                <div class="dashboard-card mb-4">
+                    <div class="section-top">
+                        <h4>My Accounts</h4>
+                        <a href="#">View All</a>
+                    </div>
+
+                    <div class="account-item">
+                        <div class="account-left">
+                            <div class="account-strip gold-bg"></div>
+                            <div>
+                                <h5>
+                                    Checking Account
+                                    <span class="small-status status-primary">Primary</span>
+                                </h5>
+                                <p>**** 4832 · Everyday banking</p>
                             </div>
                         </div>
-
-                        <div class="account-item mb-0">
-                            <div class="account-left">
-                                <div class="account-strip purple-bg"></div>
-                                <div>
-                                    <h5>
-                                        Credit Card
-                                        <span class="small-status status-active"
-                                            >Active</span
-                                        >
-                                    </h5>
-                                    <p>Visa ending in 7712</p>
-                                </div>
-                            </div>
-                            <div class="account-right">
-                                <strong>$2,450.50</strong>
-                                <i class="bi bi-chevron-right"></i>
-                            </div>
+                        <div class="account-right">
+                            <strong>$4,280.50</strong>
+                            <i class="bi bi-chevron-right"></i>
                         </div>
                     </div>
 
-                    <!-- Recent transactions/activity -->
-                    <div class="dashboard-card mb-4">
-                        <div class="section-top">
-                            <h4>Recent Activity</h4>
-                            <a href="#">View More</a>
+                    <div class="account-item">
+                        <div class="account-left">
+                            <div class="account-strip green-bg"></div>
+                            <div>
+                                <h5>
+                                    Savings Account
+                                    <span class="small-status status-active">Active</span>
+                                </h5>
+                                <p>**** 9011 · Emergency fund</p>
+                            </div>
                         </div>
-
-                        <div class="table-responsive">
-                            <table
-                                class="table activity-table align-middle mb-0"
-                            >
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Description</th>
-                                        <th>Category</th>
-                                        <th>Account</th>
-                                        <th class="text-end">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mar 10</td>
-                                        <td>Amazon Purchase</td>
-                                        <td>
-                                            <span class="soft-badge pink-badge"
-                                                >Shopping</span
-                                            >
-                                        </td>
-                                        <td>Credit Card</td>
-                                        <td
-                                            class="text-end text-danger fw-bold"
-                                        >
-                                            -$82.40
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mar 09</td>
-                                        <td>Transfer to Savings</td>
-                                        <td>
-                                            <span class="soft-badge blue-badge"
-                                                >Transfer</span
-                                            >
-                                        </td>
-                                        <td>Checking</td>
-                                        <td
-                                            class="text-end text-danger fw-bold"
-                                        >
-                                            -$400.00
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mar 08</td>
-                                        <td>Coffee Shop</td>
-                                        <td>
-                                            <span
-                                                class="soft-badge yellow-badge"
-                                                >Food</span
-                                            >
-                                        </td>
-                                        <td>Wallet</td>
-                                        <td
-                                            class="text-end text-danger fw-bold"
-                                        >
-                                            -$6.85
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mar 07</td>
-                                        <td>Refund - Bookstore</td>
-                                        <td>
-                                            <span class="soft-badge green-badge"
-                                                >Refund</span
-                                            >
-                                        </td>
-                                        <td>Checking</td>
-                                        <td
-                                            class="text-end text-success fw-bold"
-                                        >
-                                            +$24.99
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="account-right">
+                            <strong>$9,880.00</strong>
+                            <i class="bi bi-chevron-right"></i>
                         </div>
                     </div>
 
-                    <!-- Account management section -->
-                    <div class="dashboard-card">
-                        <div class="section-top">
-                            <h4>Connect &amp; Manage Accounts</h4>
+                    <div class="account-item">
+                        <div class="account-left">
+                            <div class="account-strip blue-bg"></div>
+                            <div>
+                                <h5>
+                                    Student Account
+                                    <span class="small-status status-linked">Linked</span>
+                                </h5>
+                                <p>**** 2204 · School expenses</p>
+                            </div>
                         </div>
+                        <div class="account-right">
+                            <strong>$1,929.75</strong>
+                            <i class="bi bi-chevron-right"></i>
+                        </div>
+                    </div>
 
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <div class="manage-box">
-                                    <i class="bi bi-plus-circle"></i>
-                                    <h6>Link Bank Account</h6>
-                                    <p>
-                                        Connect a new checking or savings
-                                        account.
-                                    </p>
-                                    <button class="btn manage-btn">
-                                        Add Account
-                                    </button>
-                                </div>
+                    <div class="account-item mb-0">
+                        <div class="account-left">
+                            <div class="account-strip purple-bg"></div>
+                            <div>
+                                <h5>
+                                    Credit Card
+                                    <span class="small-status status-active">Active</span>
+                                </h5>
+                                <p>Visa ending in 7712</p>
                             </div>
-
-                            <div class="col-md-4">
-                                <div class="manage-box">
-                                    <i class="bi bi-credit-card"></i>
-                                    <h6>Add Credit Card</h6>
-                                    <p>
-                                        Track your card balances and monthly
-                                        activity.
-                                    </p>
-                                    <button class="btn manage-btn">
-                                        Add Card
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="manage-box">
-                                    <i class="bi bi-phone"></i>
-                                    <h6>Connect Wallet</h6>
-                                    <p>
-                                        Sync your digital wallet for quick
-                                        access.
-                                    </p>
-                                    <button class="btn manage-btn">
-                                        Connect
-                                    </button>
-                                </div>
-                            </div>
+                        </div>
+                        <div class="account-right">
+                            <strong>$2,450.50</strong>
+                            <i class="bi bi-chevron-right"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right column -->
-                <div class="col-xl-4">
-                    <!-- Wallet panel -->
-                    <div class="dashboard-card mb-4">
-                        <div class="section-top">
-                            <h4>Wallet</h4>
-                            <a href="#">Manage</a>
-                        </div>
-
-                        <div class="wallet-box">
-                            <p>Available Balance</p>
-                            <h2>$1,093.49</h2>
-                            <span
-                                >Connected to your digital wallet and cash
-                                balance</span
-                            >
-                        </div>
-
-                        <div class="row g-3 mt-1">
-                            <div class="col-6">
-                                <button class="btn quick-btn w-100">
-                                    Add Money
-                                </button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn quick-btn w-100">
-                                    Send Money
-                                </button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn quick-btn w-100">
-                                    Statements
-                                </button>
-                            </div>
-                            <div class="col-6">
-                                <button class="btn quick-btn w-100">
-                                    Settings
-                                </button>
-                            </div>
-                        </div>
+                <!-- Recent transactions/activity -->
+                <div class="dashboard-card mb-4">
+                    <div class="section-top">
+                        <h4>Recent Activity</h4>
+                        <a href="#">View More</a>
                     </div>
 
-                    <!-- Linked cards -->
-                    <div class="dashboard-card mb-4">
-                        <div class="section-top">
-                            <h4>Linked Cards</h4>
-                            <a href="#">Add New</a>
-                        </div>
+                    <div class="table-responsive">
+                        <table class="table activity-table align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Account</th>
+                                    <th class="text-end">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mar 10</td>
+                                    <td>Amazon Purchase</td>
+                                    <td>
+                                        <span class="soft-badge pink-badge">Shopping</span>
+                                    </td>
+                                    <td>Credit Card</td>
+                                    <td class="text-end text-danger fw-bold">
+                                        -$82.40
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 09</td>
+                                    <td>Transfer to Savings</td>
+                                    <td>
+                                        <span class="soft-badge blue-badge">Transfer</span>
+                                    </td>
+                                    <td>Checking</td>
+                                    <td class="text-end text-danger fw-bold">
+                                        -$400.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 08</td>
+                                    <td>Coffee Shop</td>
+                                    <td>
+                                        <span class="soft-badge yellow-badge">Food</span>
+                                    </td>
+                                    <td>Wallet</td>
+                                    <td class="text-end text-danger fw-bold">
+                                        -$6.85
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mar 07</td>
+                                    <td>Refund - Bookstore</td>
+                                    <td>
+                                        <span class="soft-badge green-badge">Refund</span>
+                                    </td>
+                                    <td>Checking</td>
+                                    <td class="text-end text-success fw-bold">
+                                        +$24.99
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-                        <div class="mini-card dark-card">
-                            <p>Visa</p>
-                            <h5>**** 7712</h5>
-                            <span>Jamie M.</span>
-                        </div>
-
-                        <div class="mini-card blue-card">
-                            <p>Mastercard</p>
-                            <h5>**** 3028</h5>
-                            <span>Jamie M.</span>
-                        </div>
+                <!-- Account management section -->
+                <div class="dashboard-card">
+                    <div class="section-top">
+                        <h4>Connect &amp; Manage Accounts</h4>
                     </div>
 
-                    <!-- Balance breakdown -->
-                    <div class="dashboard-card mb-4">
-                        <div class="section-top">
-                            <h4>Balance Breakdown</h4>
-                        </div>
-
-                        <div class="breakdown-item">
-                            <div class="d-flex justify-content-between">
-                                <span>Checking</span>
-                                <span>34%</span>
-                            </div>
-                            <div class="progress">
-                                <div
-                                    class="progress-bar bg-primary"
-                                    style="width: 34%"
-                                ></div>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="manage-box">
+                                <i class="bi bi-plus-circle"></i>
+                                <h6>Link Bank Account</h6>
+                                <p>
+                                    Connect a new checking or savings
+                                    account.
+                                </p>
+                                <button class="btn manage-btn">
+                                    Add Account
+                                </button>
                             </div>
                         </div>
 
-                        <div class="breakdown-item">
-                            <div class="d-flex justify-content-between">
-                                <span>Savings</span>
-                                <span>53%</span>
-                            </div>
-                            <div class="progress">
-                                <div
-                                    class="progress-bar bg-success"
-                                    style="width: 53%"
-                                ></div>
+                        <div class="col-md-4">
+                            <div class="manage-box">
+                                <i class="bi bi-credit-card"></i>
+                                <h6>Add Credit Card</h6>
+                                <p>
+                                    Track your card balances and monthly
+                                    activity.
+                                </p>
+                                <button class="btn manage-btn">
+                                    Add Card
+                                </button>
                             </div>
                         </div>
 
-                        <div class="breakdown-item">
-                            <div class="d-flex justify-content-between">
-                                <span>Wallet</span>
-                                <span>13%</span>
-                            </div>
-                            <div class="progress">
-                                <div
-                                    class="progress-bar bg-warning"
-                                    style="width: 13%"
-                                ></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Quick action buttons -->
-                    <div class="dashboard-card">
-                        <div class="section-top">
-                            <h4>Quick Actions</h4>
-                        </div>
-
-                        <div class="row g-3">
-                            <div class="col-6">
-                                <div class="action-box">Transfer</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="action-box">Pay Bills</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="action-box">Top Up</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="action-box">Reports</div>
+                        <div class="col-md-4">
+                            <div class="manage-box">
+                                <i class="bi bi-phone"></i>
+                                <h6>Connect Wallet</h6>
+                                <p>
+                                    Sync your digital wallet for quick
+                                    access.
+                                </p>
+                                <button class="btn manage-btn">
+                                    Connect
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-    </body>
+
+            <!-- Right column -->
+            <div class="col-xl-4">
+                <!-- Wallet panel -->
+                <div class="dashboard-card mb-4">
+                    <div class="section-top">
+                        <h4>Wallet</h4>
+                        <a href="#">Manage</a>
+                    </div>
+
+                    <div class="wallet-box">
+                        <p>Available Balance</p>
+                        <h2>$1,093.49</h2>
+                        <span>Connected to your digital wallet and cash
+                            balance</span>
+                    </div>
+
+                    <div class="row g-3 mt-1">
+                        <div class="col-6">
+                            <button class="btn quick-btn w-100">
+                                Add Money
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn quick-btn w-100">
+                                Send Money
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn quick-btn w-100">
+                                Statements
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn quick-btn w-100">
+                                Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linked cards -->
+                <div class="dashboard-card mb-4">
+                    <div class="section-top">
+                        <h4>Linked Cards</h4>
+                        <a href="#">Add New</a>
+                    </div>
+
+                    <div class="mini-card dark-card">
+                        <p>Visa</p>
+                        <h5>**** 7712</h5>
+                        <span>Jamie M.</span>
+                    </div>
+
+                    <div class="mini-card blue-card">
+                        <p>Mastercard</p>
+                        <h5>**** 3028</h5>
+                        <span>Jamie M.</span>
+                    </div>
+                </div>
+
+                <!-- Balance breakdown -->
+                <div class="dashboard-card mb-4">
+                    <div class="section-top">
+                        <h4>Balance Breakdown</h4>
+                    </div>
+
+                    <div class="breakdown-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Checking</span>
+                            <span>34%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" style="width: 34%"></div>
+                        </div>
+                    </div>
+
+                    <div class="breakdown-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Savings</span>
+                            <span>53%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 53%"></div>
+                        </div>
+                    </div>
+
+                    <div class="breakdown-item">
+                        <div class="d-flex justify-content-between">
+                            <span>Wallet</span>
+                            <span>13%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 13%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick action buttons -->
+                <div class="dashboard-card">
+                    <div class="section-top">
+                        <h4>Quick Actions</h4>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="action-box">Transfer</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="action-box">Pay Bills</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="action-box">Top Up</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="action-box">Reports</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
