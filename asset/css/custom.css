@@ -30,7 +30,10 @@ body {
 
 .nav-link {
     color: #000000 !important;
-    font-weight: bold;
+}
+
+.nav-link.active {
+    font-weight: 600;
 }
 
 .navbar-brand-img {
@@ -52,19 +55,26 @@ body {
     color: #be185d;
 }
 
+/* Badge color variations */
+.yellow-badge {
+    background-color: #fff4cc;
+    color: #9a6b00;
+}
+
 .blue-badge {
     background-color: #dbeafe;
     color: #1d4ed8;
 }
 
-.yellow-badge {
-    background-color: #fef3c7;
-    color: #b45309;
-}
-
 .green-badge {
     background-color: #dcfce7;
     color: #15803d;
+}
+
+
+.purple-badge {
+    background-color: #ede9fe;
+    color: #7c3aed;
 }
 
 .gold-badge {
@@ -73,7 +83,12 @@ body {
 }
 
 
-.purple-badge {
-    background-color: #ede9fe;
-    color: #6d28d9;
+.red-badge {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.gray-badge {
+    background-color: #f3f4f6;
+    color: #4b5563;
 }

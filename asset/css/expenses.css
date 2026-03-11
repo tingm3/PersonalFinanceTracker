@@ -1,0 +1,13 @@
+.category {
+    font-weight: 600;
+}
+
+.text-surplus {
+    color: #28a745 !important;
+    font-weight: 600;
+}
+
+.text-deficit {
+    color: #dc3545 !important;
+    font-weight: 600;
+}

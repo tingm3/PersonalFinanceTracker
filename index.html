@@ -23,10 +23,10 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link active" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="transactions.html">Transactions</a>
@@ -48,7 +48,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <section class="hero">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-image">
                     <img src="asset/img/demo.png">
@@ -58,19 +58,18 @@
                     <h6>Personal Finance Tracker</h6>
                     <h1>Know where every dollar goes. Understand your<br>spending.</h1>
                     <p>Monitor accounts, track transactions, and analyze income and expenses in one place.</p>
-                    <button type="button" class="btn btn-success rounded-pill learn-more-btn">Learn More</button>
+                    <button type="button" class="btn btn-success rounded-pill learn-more-btn" onclick="document.getElementById('what-we-offer').scrollIntoView({ behavior: 'smooth' });">Learn More</button>
                 </div>
             </div>
 
             <!-- What We Offer Section -->
-            <div class="container offer-container">
+            <div id="what-we-offer" class="container offer-container">
                 <h2 class="mb-4 text-center">What We Offer</h2>
 
                 <div class="row text-center">
                     <!-- Feature 1 -->
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="offer-card shadow p-4 rounded h-100">
-                            <img src="asset/img/icons/accounts.png" alt="Accounts Icon" class="mb-3" style="width:50px;">
+                        <div class="offer-card shadow p-4 rounded h-100 bg-white">
                             <h5>Accounts & Wallets</h5>
                             <p class="text-muted">
                                 Track all your accounts and wallets in one place for full control.
@@ -80,8 +79,7 @@
 
                     <!-- Feature 2 -->
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="offer-card shadow p-4 rounded h-100">
-                            <img src="asset/img/icons/transactions.png" alt="Transactions Icon" class="mb-3" style="width:50px;">
+                        <div class="offer-card shadow p-4 rounded h-100 bg-white">
                             <h5>Transactions</h5>
                             <p class="text-muted">
                                 Log every income and expense quickly with an easy interface.
@@ -91,8 +89,7 @@
 
                     <!-- Feature 3 -->
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="offer-card shadow p-4 rounded h-100">
-                            <img src="asset/img/icons/dashboard.png" alt="Dashboard Icon" class="mb-3" style="width:50px;">
+                        <div class="offer-card shadow p-4 rounded h-100 bg-white">
                             <h5>Dashboard</h5>
                             <p class="text-muted">
                                 Visualize your finances with charts and summaries at a glance.
@@ -102,8 +99,7 @@
 
                     <!-- Feature 4 -->
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="offer-card shadow p-4 rounded h-100">
-                            <img src="asset/img/icons/expenses.png" alt="Expenses Icon" class="mb-3" style="width:50px;">
+                        <div class="offer-card shadow p-4 rounded h-100 bg-white">
                             <h5>Expenses & Budgets</h5>
                             <p class="text-muted">
                                 Categorize spending and set budgets to reach your financial goals.
@@ -150,6 +146,13 @@
                 </div>
             </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white py-3 mt-4">
+        <div class="container">
+            Copyright &copy; by Marwa, TingYue, Christian
+        </div>
+    </footer>
 </body>
 
 </html>
