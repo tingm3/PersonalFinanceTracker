@@ -46,14 +46,10 @@ $(document).ready(function () {
                         <label>Category</label>
                         <select>
                             <option>All</option>
+                            <option>Income</option>
                             <option>Food</option>
-                            <option>Transport</option>
-                            <option>Utilities</option>
-                            <option>Health</option>
-                            <option>Entertainment</option>
-                            <option>Housing</option>
-                            <option>Education</option>
-                            <option>Other</option>
+                            <option>Shopping</option>
+                            <option>Transfer</option>
                         </select>
                     </div>
                     <div class="filter-group">
@@ -78,11 +74,27 @@ $(document).ready(function () {
         }
     });
 
-    //giving class income/expense for color green/red
+    // Single draw handler for both badges and income/expense coloring
     table.on('draw', function () {
         $('#transaction-table tbody tr').each(function () {
+
+            // --- Category badge (column index 2) ---
+            var categoryCell = $(this).find('td:eq(2)');
+            var category = categoryCell.text().trim();
+
+            var badgeMap = {
+                'Income': 'green-badge',
+                'Food': 'yellow-badge',
+                'Shopping': 'pink-badge',
+                'Transfer': 'blue-badge',
+            };
+
+            var badgeClass = badgeMap[category] || 'yellow-badge';
+            categoryCell.html(`<span class="soft-badge ${badgeClass}">${category}</span>`);
+
             var amountCell = $(this).find('td:eq(5)');
             var amount = parseFloat(amountCell.text());
+            amountCell.removeClass('text-income text-expense');
             if (amount > 0) {
                 amountCell.addClass('text-income');
             } else if (amount < 0) {
