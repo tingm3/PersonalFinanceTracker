@@ -155,7 +155,10 @@ strong {
 
 .nav-link {
     color: #000000 !important;
-    font-weight: bold;
+}
+
+.nav-link.active {
+    font-weight: 600;
 }
 
 .navbar-brand-img {
@@ -254,4 +257,49 @@ strong {
     .box {
         padding: 25px 0;
     }
+}
+
+/* Soft badge base style */
+.soft-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+}
+/* Badge color variations */
+.yellow-badge {
+    background-color: #fff4cc;
+    color: #9a6b00;
+}
+.blue-badge {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+.green-badge {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+.pink-badge {
+    background-color: #fce7f3;
+    color: #be185d;
+}
+.purple-badge {
+    background-color: #ede9fe;
+    color: #7c3aed;
+}
+.gold-badge {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+.red-badge {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+.gray-badge {
+    background-color: #f3f4f6;
+    color: #4b5563;
 }
