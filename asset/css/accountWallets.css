@@ -180,33 +180,6 @@
     font-size: 0.95rem;
 }
 
-.soft-badge {
-    display: inline-block;
-    padding: 7px 10px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.pink-badge {
-    background-color: #fde2ef;
-    color: #be185d;
-}
-
-.blue-badge {
-    background-color: #dbeafe;
-    color: #1d4ed8;
-}
-
-.yellow-badge {
-    background-color: #fef3c7;
-    color: #b45309;
-}
-
-.green-badge {
-    background-color: #dcfce7;
-    color: #15803d;
-}
 
 .wallet-box {
     background: linear-gradient(135deg, #111111, #2f2f2f);
