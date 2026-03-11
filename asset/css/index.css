@@ -1,6 +1,8 @@
 .home-body {
     min-height: 100vh;
-    /* background: linear-gradient(to bottom, #f5d819 20%, #ffffff 100%); */
+    background-color: white;
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 20px 20px; /* distance between dots */
 }
 
 .hero {

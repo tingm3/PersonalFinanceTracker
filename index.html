@@ -58,18 +58,18 @@
                     <h6>Personal Finance Tracker</h6>
                     <h1>Know where every dollar goes. Understand your<br>spending.</h1>
                     <p>Monitor accounts, track transactions, and analyze income and expenses in one place.</p>
-                    <button type="button" class="btn btn-success rounded-pill learn-more-btn">Learn More</button>
+                    <button type="button" class="btn btn-success rounded-pill learn-more-btn" onclick="document.getElementById('what-we-offer').scrollIntoView({ behavior: 'smooth' });">Learn More</button>
                 </div>
             </div>
 
             <!-- What We Offer Section -->
-            <div class="container offer-container">
+            <div id="what-we-offer" class="container offer-container">
                 <h2 class="mb-4 text-center">What We Offer</h2>
 
                 <div class="row text-center">
                     <!-- Feature 1 -->
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="offer-card shadow p-4 rounded h-100">
+                        <div class="offer-card shadow p-4 rounded h-100 bg-white">
                             <h5>Accounts & Wallets</h5>
                             <p class="text-muted">
                                 Track all your accounts and wallets in one place for full control.
@@ -79,7 +79,7 @@
 
                     <!-- Feature 2 -->
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="offer-card shadow p-4 rounded h-100">
+                        <div class="offer-card shadow p-4 rounded h-100 bg-white">
                             <h5>Transactions</h5>
                             <p class="text-muted">
                                 Log every income and expense quickly with an easy interface.
@@ -89,7 +89,7 @@
 
                     <!-- Feature 3 -->
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="offer-card shadow p-4 rounded h-100">
+                        <div class="offer-card shadow p-4 rounded h-100 bg-white">
                             <h5>Dashboard</h5>
                             <p class="text-muted">
                                 Visualize your finances with charts and summaries at a glance.
@@ -99,7 +99,7 @@
 
                     <!-- Feature 4 -->
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <div class="offer-card shadow p-4 rounded h-100">
+                        <div class="offer-card shadow p-4 rounded h-100 bg-white">
                             <h5>Expenses & Budgets</h5>
                             <p class="text-muted">
                                 Categorize spending and set budgets to reach your financial goals.
@@ -146,6 +146,13 @@
                 </div>
             </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white py-3 mt-4">
+        <div class="container">
+            Copyright &copy; by Marwa, TingYue, Christian
+        </div>
+    </footer>
 </body>
 
 </html>
