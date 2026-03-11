@@ -24,7 +24,8 @@ body {
     flex: 1 0 0;
 }
 
-.navbar {
+.navbar,
+.footer {
     background-color: #f0f0f0 !important;
 }
 
@@ -71,7 +72,6 @@ body {
     color: #15803d;
 }
 
-
 .purple-badge {
     background-color: #ede9fe;
     color: #7c3aed;
@@ -81,7 +81,6 @@ body {
     background-color: #fef3c7;
     color: #b45309;
 }
-
 
 .red-badge {
     background-color: #fee2e2;

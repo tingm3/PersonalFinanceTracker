@@ -1,210 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Custom -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./asset/css/custom.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="./asset/css/transaction.css"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Custom -->
-    <link rel="stylesheet" type="text/css" media="screen" href="./asset/css/custom.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./asset/css/transaction.css" />
+        <!-- Library Imports -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.datatables.net/2.3.7/css/dataTables.dataTables.css"
+        />
 
-    <!-- Library Imports -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.7/css/dataTables.dataTables.css" />
+        <title>Personal Finance Tracker</title>
+    </head>
 
-    <title>Personal Finance Tracker</title>
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-dark">
-            <div class="container-fluid">
-                <img src="/asset/img/logo.png" class="navbar-brand-img" alt="Logo">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="dashboard.html">Dashboard</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="transactions.html">Transactions</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="accountWallets.html">Accounts & Wallets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="incomes.html">Incomes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="expenses.html">Expenses</a>
-                        </li>
-                    </ul>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark">
+                <div class="container-fluid">
+                    <img
+                        src="/asset/img/logo.png"
+                        class="navbar-brand-img"
+                        alt="Logo"
+                    />
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavbar"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="collapsibleNavbar"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="dashboard.html"
+                                    >Dashboard</a
+                                >
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="transactions.html"
+                                    >Transactions</a
+                                >
+                            </li>
+                            <li>
+                                <a class="nav-link" href="accountWallets.html"
+                                    >Accounts & Wallets</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="incomes.html"
+                                    >Incomes</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="expenses.html"
+                                    >Expenses</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div id="wrapper">
-        <div class="content-area">
-            <div class="container-xl mt-4">
-                <div class="row">
-                    <div class="col-md-12">
+            </nav>
+        </header>
+        <div id="wrapper">
+            <div class="content-area">
+                <div class="container-xl mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box">
+                                <table
+                                    id="transaction-table"
+                                    class="table table-striped"
+                                >
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                            <th>Category</th>
+                                            <th>Account</th>
+                                            <th>Type</th>
+                                            <th>Amount ($)</th>
+                                        </tr>
+                                    </thead>
 
-                        <div class="box">
-
-                            <table id="transaction-table" class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Description</th>
-                                        <th>Category</th>
-                                        <th>Account</th>
-                                        <th>Type</th>
-                                        <th>Amount ($)</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td>2026-03-10</td>
-                                        <td>Amazon Purchase</td>
-                                        <td>Shopping</td>
-                                        <td>Credit Card</td>
-                                        <td>Expense</td>
-                                        <td>-82.40</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-09</td>
-                                        <td>Transfer to Savings</td>
-                                        <td>Transfer</td>
-                                        <td>Checking</td>
-                                        <td>Expense</td>
-                                        <td>-400.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-08</td>
-                                        <td>Coffee Shop</td>
-                                        <td>Food</td>
-                                        <td>Wallet</td>
-                                        <td>Expense</td>
-                                        <td>-6.85</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-07</td>
-                                        <td>Refund - Bookstore</td>
-                                        <td>Income</td>
-                                        <td>Checking</td>
-                                        <td>Income</td>
-                                        <td>24.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-06</td>
-                                        <td>Grocery Store</td>
-                                        <td>Food</td>
-                                        <td>Credit Card</td>
-                                        <td>Expense</td>
-                                        <td>-95.20</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-05</td>
-                                        <td>Electricity Bill</td>
-                                        <td>Shopping</td>
-                                        <td>Bank Account</td>
-                                        <td>Expense</td>
-                                        <td>-120.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-04</td>
-                                        <td>Salary</td>
-                                        <td>Income</td>
-                                        <td>Bank Account</td>
-                                        <td>Income</td>
-                                        <td>3500.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-03</td>
-                                        <td>Uber Ride</td>
-                                        <td>Transfer</td>
-                                        <td>Credit Card</td>
-                                        <td>Expense</td>
-                                        <td>-22.75</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-02</td>
-                                        <td>Gym Membership</td>
-                                        <td>Shopping</td>
-                                        <td>Credit Card</td>
-                                        <td>Expense</td>
-                                        <td>-50.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-03-01</td>
-                                        <td>Rent</td>
-                                        <td>Transfer</td>
-                                        <td>Bank Account</td>
-                                        <td>Expense</td>
-                                        <td>-1200.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-02-28</td>
-                                        <td>Internet Bill</td>
-                                        <td>Shopping</td>
-                                        <td>Bank Account</td>
-                                        <td>Expense</td>
-                                        <td>-60.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-02-27</td>
-                                        <td>Gas Station</td>
-                                        <td>Food</td>
-                                        <td>Credit Card</td>
-                                        <td>Expense</td>
-                                        <td>-45.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-02-26</td>
-                                        <td>Dividend Payout</td>
-                                        <td>Income</td>
-                                        <td>Bank Account</td>
-                                        <td>Income</td>
-                                        <td>150.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-02-25</td>
-                                        <td>Pet Supplies</td>
-                                        <td>Shopping</td>
-                                        <td>Credit Card</td>
-                                        <td>Expense</td>
-                                        <td>-35.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2026-02-24</td>
-                                        <td>Dinner Out</td>
-                                        <td>Food</td>
-                                        <td>Credit Card</td>
-                                        <td>Expense</td>
-                                        <td>-45.50</td>
-                                    </tr>
-                                </tbody>
-
-                            </table>
+                                    <tbody>
+                                        <tr>
+                                            <td>2026-03-10</td>
+                                            <td>Amazon Purchase</td>
+                                            <td>Shopping</td>
+                                            <td>Credit Card</td>
+                                            <td>Expense</td>
+                                            <td>-82.40</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-09</td>
+                                            <td>Transfer to Savings</td>
+                                            <td>Transfer</td>
+                                            <td>Checking</td>
+                                            <td>Expense</td>
+                                            <td>-400.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-08</td>
+                                            <td>Coffee Shop</td>
+                                            <td>Food</td>
+                                            <td>Wallet</td>
+                                            <td>Expense</td>
+                                            <td>-6.85</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-07</td>
+                                            <td>Refund - Bookstore</td>
+                                            <td>Income</td>
+                                            <td>Checking</td>
+                                            <td>Income</td>
+                                            <td>24.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-06</td>
+                                            <td>Grocery Store</td>
+                                            <td>Food</td>
+                                            <td>Credit Card</td>
+                                            <td>Expense</td>
+                                            <td>-95.20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-05</td>
+                                            <td>Electricity Bill</td>
+                                            <td>Shopping</td>
+                                            <td>Bank Account</td>
+                                            <td>Expense</td>
+                                            <td>-120.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-04</td>
+                                            <td>Salary</td>
+                                            <td>Income</td>
+                                            <td>Bank Account</td>
+                                            <td>Income</td>
+                                            <td>3500.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-03</td>
+                                            <td>Uber Ride</td>
+                                            <td>Transfer</td>
+                                            <td>Credit Card</td>
+                                            <td>Expense</td>
+                                            <td>-22.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-02</td>
+                                            <td>Gym Membership</td>
+                                            <td>Shopping</td>
+                                            <td>Credit Card</td>
+                                            <td>Expense</td>
+                                            <td>-50.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-03-01</td>
+                                            <td>Rent</td>
+                                            <td>Transfer</td>
+                                            <td>Bank Account</td>
+                                            <td>Expense</td>
+                                            <td>-1200.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-02-28</td>
+                                            <td>Internet Bill</td>
+                                            <td>Shopping</td>
+                                            <td>Bank Account</td>
+                                            <td>Expense</td>
+                                            <td>-60.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-02-27</td>
+                                            <td>Gas Station</td>
+                                            <td>Food</td>
+                                            <td>Credit Card</td>
+                                            <td>Expense</td>
+                                            <td>-45.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-02-26</td>
+                                            <td>Dividend Payout</td>
+                                            <td>Income</td>
+                                            <td>Bank Account</td>
+                                            <td>Income</td>
+                                            <td>150.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-02-25</td>
+                                            <td>Pet Supplies</td>
+                                            <td>Shopping</td>
+                                            <td>Credit Card</td>
+                                            <td>Expense</td>
+                                            <td>-35.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2026-02-24</td>
+                                            <td>Dinner Out</td>
+                                            <td>Food</td>
+                                            <td>Credit Card</td>
+                                            <td>Expense</td>
+                                            <td>-45.50</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.datatables.net/2.3.7/js/dataTables.js"></script>
-    <script src="asset/js/transaction.js"></script>
 
-</body>
+        <!-- Footer -->
+        <footer class="footer text-center text-black py-3 mt-4">
+            <div class="container">
+                Copyright &copy; by Marwa, TingYue, Christian
+            </div>
+        </footer>
 
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.datatables.net/2.3.7/js/dataTables.js"></script>
+        <script src="asset/js/transaction.js"></script>
+    </body>
 </html>
