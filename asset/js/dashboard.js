@@ -152,7 +152,6 @@ var spark3 = {
         min: 0
     },
     colors: ['#008FFB'],
-    //colors: ['#5564BE'],
     title: {
         text: '$135,965',
         offsetX: 30,
@@ -175,8 +174,6 @@ var spark3 = {
 new ApexCharts(document.querySelector("#spark1"), spark1).render();
 new ApexCharts(document.querySelector("#spark2"), spark2).render();
 new ApexCharts(document.querySelector("#spark3"), spark3).render();
-
-
 
 var optionsArea = {
     chart: {
