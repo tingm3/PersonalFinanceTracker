@@ -1,17 +1,13 @@
 $(document).ready(function () {
-    // Initialize DataTable
+    // once HTML is loaded, then run this script
     $('#expenses-table').DataTable({
-        paging: true,
-        searching: true,
-        ordering: true,
-        order: [[0, 'desc']],
+        // calls the DataTables plugin
+        paging: true, // allow pagination
+        searching: true, // allowing search of data
+        ordering: true, // adding ordering by column
+        order: [[0, 'desc']], // default sort: first column (index 0) descending
         pageLength: 10,
-        lengthChange: false,
-        info: false,
-        columnDefs: [
-            {targets: 1, orderable: false},
-            {targets: 2, orderable: true},
-            {targets: 3, orderable: true},
-        ],
+        lengthChange: false, // user cannot change the number of rows per page
+        info: false, // Showing 1 to 10 of 57 entries is hidden
     });
 });
